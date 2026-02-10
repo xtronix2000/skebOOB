@@ -20,6 +20,8 @@
 ```bash
 git clone https://github.com/xtronix2000/skebOOB.git
 cd skebOOB
+python3 -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
 ```
 2. Запуск программы
