@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #300A24;
+    color: #ffffff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background: linear-gradient(135deg, #3d3d3d 0%, #2a2a2a 100%);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #E95420;
+}
+
+.header h1 {
+    font-size: 1.5em;
+    color: #E95420;
+    font-weight: bold;
+}
+
+.controls {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    background: #E95420;
+    color: white;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.btn:hover {
+    background: #dd4814;
+}
+
+.stats {
+    background: rgba(233, 84, 32, 0.15);
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: 1px solid #E95420;
+    font-weight: bold;
+    color: #E95420;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* Левая панель - список запросов */
+.sidebar {
+    width: 350px;
+    background: #300A24;
+    border-right: 1px solid #3d3d3d;
+    overflow-y: auto;
+}
+
+.request-list-item {
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.request-list-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.request-list-item.active {
+    background: rgba(255, 255, 255, 0.08);
+    border-left: 4px solid #E95420;
+}
+
+.request-list-item .method-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.method-badge.GET {
+    background: #4e9a06;
+}
+
+.method-badge.POST {
+    background: #3a86ff;
+}
+
+.request-list-item .id {
+    font-size: 14px;
+    font-weight: bold;
+    color: #E95420;
+}
+
+.request-list-item .url {
+    font-size: 13px;
+    color: #b0b0b0;
+    margin-top: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.request-list-item .time {
+    font-size: 12px;
+    color: #888888;
+    margin-top: 5px;
+}
+
+/* Правая панель - детали запроса */
+.details {
+    flex: 1;
+    background: #300A24;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.details .empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #888888;
+    font-size: 18px;
+}
+
+.detail-header {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.detail-header .method-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.detail-header .id {
+    font-size: 20px;
+    font-weight: bold;
+    color: #8AE234;
+}
+
+.detail-header .time {
+    color: #888888;
+    margin-top: 8px;
+}
+
+.detail-section {
+    margin-bottom: 20px;
+}
+
+.detail-section h3 {
+    font-size: 14px;
+    color: #b0b0b0;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.detail-value {
+    background: #1e1e1e;
+    padding: 12px;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    word-break: break-all;
+    line-height: 1.5;
+    color: #d4d4d4;
+}
+
+pre {
+    background: #1e1e1e;
+    padding: 12px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-size: 12px;
+    line-height: 1.5;
+    margin: 0;
+    color: #d4d4d4;
+}
+
+.empty {
+    text-align: center;
+    padding: 50px 20px;
+    color: #888888;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #300A24;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #E95420;
+}
