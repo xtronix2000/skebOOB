@@ -33,7 +33,7 @@ python3 app.py
 # С кастомным портом
 python3 app.py -p 8080
 ```
-<img width="1915" height="947" alt="image" src="https://github.com/user-attachments/assets/80fce005-ad96-4c46-a35c-572a4a4847ef" />
+<img width="1919" height="947" alt="image" src="https://github.com/user-attachments/assets/d9ad773c-5fbd-41fa-aecf-1899b10dcd0e" />
 
 ## Использование
 1. Открой дашборд: http://localhost:17032/dashboard
