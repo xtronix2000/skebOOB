@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> skebOOB Catcher</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>📡 skebOOB Request Catcher</h1>
+        <div class="controls">
+            <button class="btn" onclick="clearAll()">🗑️ Очистить</button>
+            <div class="stats">Запросов: <span id="count">0</span></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Левая панель со списком -->
+        <div class="sidebar" id="sidebar">
+            <div class="empty">Нет запросов</div>
+        </div>
+
+        <!-- Правая панель с деталями -->
+        <div class="details" id="details">
+            <div class="empty">Выберите запрос из списка</div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
